@@ -7,7 +7,7 @@ wykosky2008:
   date: 2008
   page-range: 1795-1806
   serial-number:
-    doi: 10.1158/1541-7786.MCR-08-0044
+    doi: 10.1158/1541-7786.MCR-08-0244
   parent:
     type: Periodical
     title: Molecular Cancer Research
@@ -16,7 +16,7 @@ wykosky2008:
 
 yu2011:
   type: Article
-  title: Boosting Brain Uptake of a Therapeutic Antibody by Reducing Its Affinity for a Transcytosis Target
+  title: "Boosting Brain Uptake of a Therapeutic Antibody by Reducing Its Affinity for a Transcytosis Target"
   author:
     - Yu, Y. Joy
     - Zhang, Yin
@@ -41,7 +41,7 @@ yu2011:
 
 niewoehner2014:
   type: Article
-  title: Increased Brain Penetration and Potency of a Therapeutic Antibody Using a Monovalent Molecular Shuttle
+  title: "Increased Brain Penetration and Potency of a Therapeutic Antibody Using a Monovalent Molecular Shuttle"
   author:
     - Niewoehner, Jens
     - Bohrmann, Bernd
@@ -81,7 +81,7 @@ muyldermans2013:
 
 dubowchik2002:
   type: Article
-  title: Cathepsin B-Labile Dipeptide Linkers for Lysosomal Release of Doxorubicin from Internalizing Immunoconjugates
+  title: "Cathepsin B-Labile Dipeptide Linkers for Lysosomal Release of Doxorubicin from Internalizing Immunoconjugates"
   author:
     - Dubowchik, Gene M.
     - Firestone, Raymond A.
@@ -104,7 +104,7 @@ dubowchik2002:
 
 jumper2021:
   type: Article
-  title: Highly Accurate Protein Structure Prediction with AlphaFold
+  title: "Highly Accurate Protein Structure Prediction with AlphaFold"
   author:
     - Jumper, John
     - Evans, Richard
@@ -170,7 +170,7 @@ mirdita2022:
 
 doronina2003:
   type: Article
-  title: Development of Potent Monoclonal Antibody Auristatin Conjugates for Cancer Therapy
+  title: "Development of Potent Monoclonal Antibody Auristatin Conjugates for Cancer Therapy"
   author:
     - Doronina, Svetlana O.
     - Toki, Brian E.
@@ -198,7 +198,7 @@ doronina2003:
 
 lawrence1999:
   type: Article
-  title: Crystal Structure of the Ectodomain of Human Transferrin Receptor
+  title: "Crystal Structure of the Ectodomain of Human Transferrin Receptor"
   author:
     - Lawrence, Christopher M.
     - Ray, Subhrangsu
