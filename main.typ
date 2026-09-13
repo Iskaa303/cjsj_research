@@ -141,7 +141,7 @@ para-aminobenzyloxycarbonyl (PABC) self-immolative spacer @dubowchik2002.
 = Results
 
 AlphaFold2/ColabFold returned well-packed models for all three constructs, and
-relaxation uniformly improved the scores by removing steric clashes (Table 1).
+relaxation uniformly improved the scores by removing steric clashes (@tab:scores).
 The best relaxed models were ranked fourth for every construct. The bispecific
 nanobody achieved the lowest relaxed energy ($-781.0$ REU), consistent with the
 larger, fully folded two-domain assembly; the monovalent arms reached $-414.4$
@@ -175,11 +175,11 @@ larger, fully folded two-domain assembly; the monovalent arms reached $-414.4$
   caption: [AlphaFold2/ColabFold model scores for the two monovalent arms and
     the tandem bispecific nanobody. Best relaxed model per construct is shown in
     bold.],
-)
+) <tab:scores>
 
 Rosetta docking of the EphA2 arm produced five sterically reasonable decoys
 clustered around $-1215$ to $-1230$ REU, with the lowest-energy interface at
-$-1230.5$ REU (Table 2); the remaining five decoys adopted severe clashes
+$-1230.5$ REU (@tab:docking); the remaining five decoys adopted severe clashes
 ($> 10^5$ REU) and were discarded. The favorable decoys share a common binding
 mode, indicating convergence of the search.
 
@@ -204,12 +204,12 @@ mode, indicating convergence of the search.
   caption: [Rosetta docking scores for the EphA2 arm against the EphA2
     receptor. Favorable decoys cluster near $-1220$ REU; positive scores indicate
     steric clashes.],
-)
+) <tab:docking>
 
-The engineered architecture is summarized in Figure 1. Each arm retains the
+The engineered architecture is summarized in @fig:architecture. Each arm retains the
 grafted paratope on the VHH framework, separated by a flexible $(G_4 S)_3$ linker
 long enough to allow the two arms to engage EphA2 and TfR simultaneously. The
-TfR ectodomain used for visualization is shown in Figure 2.
+TfR ectodomain used for visualization is shown in @fig:tfr.
 
 #figure(
   box(width: 100%, height: 150pt, {
@@ -249,13 +249,13 @@ TfR ectodomain used for visualization is shown in Figure 2.
     grafted from the anti-EphA2 antibody 3SKJ and the TfR antibody 6WX1, are
     joined by a $(G_4 S)_3$ linker and simultaneously engage EphA2 on the tumor and
     TfR on the brain endothelium.],
-)
+) <fig:architecture>
 
 #figure(
   image("assets/tfr.png", width: 100%),
   caption: [Transferrin receptor ectodomain (PDB 1CX8/6WRX) rendered in PyMOL,
     used as the docking target for the TfR arm.],
-)
+) <fig:tfr>
 
 = Discussion
 
