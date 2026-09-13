@@ -154,7 +154,7 @@ larger, fully folded two-domain assembly; the monovalent arms reached $-414.4$
     align: (left, center, center, center),
     inset: 4pt,
     table.header(
-      [*Construct*], [*Rank*], [*Relaxed (REU)*], [*Δ rel.-unrel.*]
+      [*Construct*], [*Rank*], [*Relaxed (REU)*], [*#sym.Delta rel.-unrel.*]
     ),
     [Bispecific Nb], [1], [-755.5], [-2867.2],
     [Bispecific Nb], [2], [-775.1], [-2529.7],
