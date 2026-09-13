@@ -1,11 +1,13 @@
 wykosky2008:
   type: Article
-  title: "The EphA2 Receptor and EphrinA1 Ligands in Cancer: Prospects for Molecular Targets"
+  title: "The EphA2 Receptor and EphrinA1 Ligand in Solid Tumors: Function and Therapeutic Targeting"
   author:
     - Wykosky, Jill
     - Debinski, Waldemar
   date: 2008
   page-range: 1795-1806
+  serial-number:
+    doi: 10.1158/1541-7786.MCR-08-0044
   parent:
     type: Periodical
     title: Molecular Cancer Research
@@ -19,8 +21,18 @@ yu2011:
     - Yu, Y. Joy
     - Zhang, Yin
     - Kenrick, Margaret
+    - Hoyte, Kwame
+    - Luk, Wilman
+    - Lu, Yanmei
+    - Atwal, Jasvinder
+    - Elliott, J. Michael
+    - Prabhu, Saileta
+    - Watts, Ryan J.
+    - Dennis, Mark S.
   date: 2011
   page-range: 84ra44
+  serial-number:
+    doi: 10.1126/scitranslmed.3002230
   parent:
     type: Periodical
     title: Science Translational Medicine
@@ -34,8 +46,20 @@ niewoehner2014:
     - Niewoehner, Jens
     - Bohrmann, Bernd
     - Collin, Ludovic
+    - Urich, Eduard
+    - Sade, Hadassah
+    - Maunz, Peter
+    - Rueger, Petra
+    - Stracke, Jan Olaf
+    - Lau, Wilma
+    - Tissot, Alain C.
+    - Loetscher, Hansruedi
+    - Ghosh, Anirvan
+    - Freskgård, Per-Ola
   date: 2014
   page-range: 49-60
+  serial-number:
+    doi: 10.1016/j.neuron.2013.10.061
   parent:
     type: Periodical
     title: Neuron
@@ -48,6 +72,8 @@ muyldermans2013:
   author: Muyldermans, Serge
   date: 2013
   page-range: 775-797
+  serial-number:
+    doi: 10.1146/annurev-biochem-063011-092449
   parent:
     type: Periodical
     title: Annual Review of Biochemistry
@@ -60,8 +86,16 @@ dubowchik2002:
     - Dubowchik, Gene M.
     - Firestone, Raymond A.
     - Padilla, Linda
+    - Willner, David
+    - Hofstead, Sandra J.
+    - Mosure, Kathleen
+    - Knipe, Jay O.
+    - Lasch, Shirley J.
+    - Trail, Pamela A.
   date: 2002
   page-range: 855-869
+  serial-number:
+    doi: 10.1021/bc025536j
   parent:
     type: Periodical
     title: Bioconjugate Chemistry
@@ -75,8 +109,41 @@ jumper2021:
     - Jumper, John
     - Evans, Richard
     - Pritzel, Alexander
+    - Green, Tim
+    - Figurnov, Michael
+    - Ronneberger, Olaf
+    - Tunyasuvunakool, Kathryn
+    - Bates, Russ
+    - Žídek, Augustin
+    - Potapenko, Anna
+    - Bridgland, Alex
+    - Meyer, Clemens
+    - Kohl, Simon A. A.
+    - Ballard, Andrew J.
+    - Cowie, Andrew
+    - Romera-Paredes, Bernardino
+    - Nikolov, Stanislav
+    - Jain, Rishub
+    - Adler, Jonas
+    - Back, Trevor
+    - Petersen, Stig
+    - Reiman, David
+    - Clancy, Ellen
+    - Zielinski, Michal
+    - Steinegger, Martin
+    - Pacholska, Michalina
+    - Berghammer, Tamas
+    - Bodenstein, Sebastian
+    - Silver, David
+    - Vinyals, Oriol
+    - Senior, Andrew W.
+    - Kavukcuoglu, Koray
+    - Kohli, Pushmeet
+    - Hassabis, Demis
   date: 2021
   page-range: 583-589
+  serial-number:
+    doi: 10.1038/s41586-021-03819-2
   parent:
     type: Periodical
     title: Nature
@@ -94,6 +161,8 @@ mirdita2022:
     - Steinegger, Martin
   date: 2022
   page-range: 679-682
+  serial-number:
+    doi: 10.1038/s41592-022-01488-1
   parent:
     type: Periodical
     title: Nature Methods
@@ -106,8 +175,21 @@ doronina2003:
     - Doronina, Svetlana O.
     - Toki, Brian E.
     - Torgov, Michael Y.
+    - Mendelsohn, Brian A.
+    - Cerveny, Charles G.
+    - Chace, Dana F.
+    - DeBlanc, Ron L.
+    - Gearing, R. Patrick
+    - Bovee, Tim D.
+    - Siegall, Clay B.
+    - Francisco, Joseph A.
+    - Wahl, Alan F.
+    - Meyer, Damon L.
+    - Senter, Peter D.
   date: 2003
   page-range: 778-784
+  serial-number:
+    doi: 10.1038/nbt832
   parent:
     type: Periodical
     title: Nature Biotechnology
@@ -121,11 +203,13 @@ lawrence1999:
     - Lawrence, Christopher M.
     - Ray, Subhrangsu
     - Babyonyshev, Marina
-    - Galluser, R.
+    - Galluser, Roger
     - Borhani, David W.
     - Harrison, Stephen C.
   date: 1999
   page-range: 779-782
+  serial-number:
+    doi: 10.1126/science.286.5440.779
   parent:
     type: Periodical
     title: Science
