@@ -1,0 +1,5 @@
+raw/
+devenv.lock
+.devenv/
+
+*.pdf
