@@ -1,0 +1,132 @@
+wykosky2008:
+  type: Article
+  title: "The EphA2 Receptor and EphrinA1 Ligands in Cancer: Prospects for Molecular Targets"
+  author:
+    - Wykosky, Jill
+    - Debinski, Waldemar
+  date: 2008
+  page-range: 1795-1806
+  parent:
+    type: Periodical
+    title: Molecular Cancer Research
+    volume: 6
+    issue: 12
+
+yu2011:
+  type: Article
+  title: Boosting Brain Uptake of a Therapeutic Antibody by Reducing Its Affinity for a Transcytosis Target
+  author:
+    - Yu, Y. Joy
+    - Zhang, Yin
+    - Kenrick, Margaret
+  date: 2011
+  page-range: 84ra44
+  parent:
+    type: Periodical
+    title: Science Translational Medicine
+    volume: 3
+    issue: 84
+
+niewoehner2014:
+  type: Article
+  title: Increased Brain Penetration and Potency of a Therapeutic Antibody Using a Monovalent Molecular Shuttle
+  author:
+    - Niewoehner, Jens
+    - Bohrmann, Bernd
+    - Collin, Ludovic
+  date: 2014
+  page-range: 49-60
+  parent:
+    type: Periodical
+    title: Neuron
+    volume: 81
+    issue: 1
+
+muyldermans2013:
+  type: Article
+  title: "Nanobodies: Natural Single-Domain Antibodies"
+  author: Muyldermans, Serge
+  date: 2013
+  page-range: 775-797
+  parent:
+    type: Periodical
+    title: Annual Review of Biochemistry
+    volume: 82
+
+dubowchik2002:
+  type: Article
+  title: Cathepsin B-Labile Dipeptide Linkers for Lysosomal Release of Doxorubicin from Internalizing Immunoconjugates
+  author:
+    - Dubowchik, Gene M.
+    - Firestone, Raymond A.
+    - Padilla, Linda
+  date: 2002
+  page-range: 855-869
+  parent:
+    type: Periodical
+    title: Bioconjugate Chemistry
+    volume: 13
+    issue: 4
+
+jumper2021:
+  type: Article
+  title: Highly Accurate Protein Structure Prediction with AlphaFold
+  author:
+    - Jumper, John
+    - Evans, Richard
+    - Pritzel, Alexander
+  date: 2021
+  page-range: 583-589
+  parent:
+    type: Periodical
+    title: Nature
+    volume: 596
+
+mirdita2022:
+  type: Article
+  title: "ColabFold: Making Protein Folding Accessible to All"
+  author:
+    - Mirdita, Milot
+    - Schütze, Konstantin
+    - Moriwaki, Yoshitaka
+    - Heo, Lim
+    - Ovchinnikov, Sergey
+    - Steinegger, Martin
+  date: 2022
+  page-range: 679-682
+  parent:
+    type: Periodical
+    title: Nature Methods
+    volume: 19
+
+doronina2003:
+  type: Article
+  title: Development of Potent Monoclonal Antibody Auristatin Conjugates for Cancer Therapy
+  author:
+    - Doronina, Svetlana O.
+    - Toki, Brian E.
+    - Torgov, Michael Y.
+  date: 2003
+  page-range: 778-784
+  parent:
+    type: Periodical
+    title: Nature Biotechnology
+    volume: 21
+    issue: 7
+
+lawrence1999:
+  type: Article
+  title: Crystal Structure of the Ectodomain of Human Transferrin Receptor
+  author:
+    - Lawrence, Christopher M.
+    - Ray, Subhrangsu
+    - Babyonyshev, Marina
+    - Galluser, R.
+    - Borhani, David W.
+    - Harrison, Stephen C.
+  date: 1999
+  page-range: 779-782
+  parent:
+    type: Periodical
+    title: Science
+    volume: 286
