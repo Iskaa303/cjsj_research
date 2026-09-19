@@ -1,3 +1,5 @@
+#import "@preview/maquette-gltf:0.1.0": render-gltf
+
 #set page(paper: "us-letter", margin: 0.75in, columns: 2)
 #set text(font: ("Liberation Serif", "Libertinus Serif"), size: 10pt)
 #set par(justify: true, leading: 0.95em, first-line-indent: 0.2in)
@@ -209,7 +211,7 @@ mode, indicating convergence of the search.
 The engineered architecture is summarized in @fig:architecture. Each arm retains the
 grafted paratope on the VHH framework, separated by a flexible $(G_4 S)_3$ linker
 long enough to allow the two arms to engage EphA2 and TfR simultaneously. The
-TfR ectodomain used for visualization is shown in @fig:tfr.
+predicted bispecific nanobody is shown in @fig:model.
 
 #figure(
   box(width: 100%, height: 150pt, {
@@ -251,11 +253,20 @@ TfR ectodomain used for visualization is shown in @fig:tfr.
     TfR on the brain endothelium.],
 ) <fig:architecture>
 
+#let model = read("assets/red_epha2_blue_tfr.glb", encoding: none)
+
 #figure(
-  image("assets/tfr.png", width: 100%),
-  caption: [Transferrin receptor ectodomain (PDB 1CX8/6WRX) rendered in PyMOL,
-    used as the docking target for the TfR arm.],
-) <fig:tfr>
+  render-gltf(model,
+    camera: (44.144, 19.257, 74.308),
+    center: (-0.6425, 0.7652, 0.2422),
+    up: (-0.202, 0.972, -0.12),
+    //background: "#182028",
+    shadows: true,
+    antialias: 4,
+  ),
+  caption: [Predicted tandem bispecific nanobody. The EphA2 arm is red, the TfR
+    arm blue, and the $(G_4 S)_3$ linker green.],
+) <fig:model>
 
 = Discussion
 
