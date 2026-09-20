@@ -81,7 +81,7 @@ muyldermans2013:
 
 dubowchik2002:
   type: Article
-  title: "Cathepsin B-Labile Dipeptide Linkers for Lysosomal Release of Doxorubicin from Internalizing Immunoconjugates"
+  title: "Cathepsin B-Labile Dipeptide Linkers for Lysosomal Release of Doxorubicin from Internalizing Immunoconjugates: Model Studies of Enzymatic Drug Release and Antigen-Specific In Vitro Anticancer Activity"
   author:
     - Dubowchik, Gene M.
     - Firestone, Raymond A.
@@ -214,3 +214,124 @@ lawrence1999:
     type: Periodical
     title: Science
     volume: 286
+
+berman2000:
+  type: Article
+  title: "The Protein Data Bank"
+  author:
+    - Berman, Helen M.
+    - Battistuz, Tammy
+    - Bhat, T. N.
+    - Bluhm, Wolfgang F.
+    - Bourne, Philip E.
+    - Burkhardt, Kyle
+    - Feng, Zukang
+    - Gilliland, Gary L.
+    - Iype, Lisa
+    - Jain, Shri
+    - Fagan, Phoebe
+    - Marvin, James
+    - Padilla, David
+    - Ravichandran, Veerasamy
+    - Schneider, Bohdan
+    - Thanki, Narmada
+    - Weissig, Helge
+    - Westbrook, John D.
+    - Zardecki, Christine
+  date: 2002
+  page-range: 899-907
+  serial-number:
+    doi: 10.1107/S0907444902003451
+  parent:
+    type: Periodical
+    title: Acta Crystallographica Section D
+    volume: 58
+    issue: 6
+
+gray2003:
+  type: Article
+  title: "Protein-Protein Docking with Simultaneous Optimization of Rigid-Body Displacement and Side-Chain Conformations"
+  author:
+    - Gray, Jeffrey J.
+    - Moughon, Stewart
+    - Wang, Chu
+    - Schueler-Furman, Ora
+    - Kuhlman, Brian
+    - Rohl, Carol A.
+    - Baker, David
+  date: 2003
+  page-range: 281-299
+  serial-number:
+    doi: 10.1016/S0022-2836(03)00670-3
+  parent:
+    type: Periodical
+    title: Journal of Molecular Biology
+    volume: 331
+    issue: 1
+
+carl1981:
+  type: Article
+  title: "A Novel Connector Linkage Applicable in Prodrug Design"
+  author:
+    - Carl, Philip L.
+    - Chakravarty, Prantik K.
+    - Katzenellenbogen, John A.
+  date: 1981
+  page-range: 479-480
+  serial-number:
+    doi: 10.1021/jm00137a001
+  parent:
+    type: Periodical
+    title: Journal of Medicinal Chemistry
+    volume: 24
+    issue: 5
+
+chen2013:
+  type: Article
+  title: "Fusion Protein Linkers: Property, Design and Functionality"
+  author:
+    - Chen, Xiaoying
+    - Zaro, Jennica L.
+    - Shen, Wei-Chiang
+  date: 2013
+  page-range: 1357-1369
+  serial-number:
+    doi: 10.1016/j.addr.2012.09.039
+  parent:
+    type: Periodical
+    title: Advanced Drug Delivery Reviews
+    volume: 65
+    issue: 10
+
+lefranc2003:
+  type: Article
+  title: "IMGT Unique Numbering for Immunoglobulin and T Cell Receptor Variable Domains and Ig Superfamily V-like Domains"
+  author:
+    - Lefranc, Marie-Paule
+    - Pommié, Christelle
+    - Ruiz, Manuel
+    - Giudicelli, Veronique
+    - Foulquier, Elodie
+    - Truong, Lisa
+    - Thouvenin-Contet, Veronique
+    - Lefranc, Gerard
+  date: 2003
+  page-range: 55-77
+  serial-number:
+    doi: 10.1016/S0145-305X(02)00039-3
+  parent:
+    type: Periodical
+    title: Developmental and Comparative Immunology
+    volume: 27
+    issue: 1
+
+delano2002:
+  type: Article
+  title: "PyMOL: An Open-Source Molecular Graphics Tool"
+  author: DeLano, Warren L.
+  date: 2002
+  page-range: 82-92
+  parent:
+    type: Periodical
+    title: CCP4 Newsletter on Protein Crystallography
+    issue: 40
