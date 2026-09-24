@@ -1,0 +1,3 @@
+Figure 1. Architecture of the tandem bispecific nanobody and its delivery mechanism. Two VHH arms, grafted from the anti-EphA2 antibody 3SKJ and the TfR antibody 6WX1, are joined by a (G4S)3 linker and engage EphA2 on the tumor cell and TfR on the brain endothelium. The C-terminal Val-Cit-PABC-MMAE module is released by cathepsin B, and TfR binding drives receptor-mediated transcytosis across the blood-brain barrier.
+
+Figure 2. Relaxed model of the tandem bispecific nanobody. The EphA2 arm is shown in red, the TfR arm in blue, and the (G4S)3 linker in green.

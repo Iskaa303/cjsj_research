@@ -148,19 +148,20 @@ and the Transferrin Receptor for Brain-Tumor Delivery]
 Receptor-mediated transcytosis (RMT) of the transferrin receptor (TfR) is one of
 the few clinically validated routes for delivering protein therapeutics across the
 blood--brain barrier (BBB), but brain-tumor therapy additionally requires
-tumor-selective engagement. We designed and evaluated a bispecific single-domain antibody (nanobody)
-that pairs an anti-EphA2 paratope
+tumor-selective engagement. We designed and computationally evaluated a tandem
+bispecific single-domain antibody (nanobody) that pairs an anti-EphA2 paratope
 with a TfR-binding paratope. Complementarity-determining regions (CDRs) from the
 anti-EphA2 antibody 3SKJ and the TfR binder 6WX1 were grafted onto the camelid VHH
 scaffold cAbBCII-10 (PDB 3DWT) and fused through a $(G_4 S)_3$ linker.
 AlphaFold2/ColabFold predicted five models per construct and AMBER relaxation
 improved every model, giving mean relaxed energies of $-759.7 plus.minus 21.3$ REU
 for the construct, $-402.5 plus.minus 10.1$ REU for the EphA2 arm and
-$-371.9 plus.minus 7.9$ REU for the TfR arm ($n = 5$). The energy lies
-within 15 REU of the sum of the isolated arms, indicating that fusion introduces no
-significant strain. Rosetta docking of the EphA2 arm onto its receptor converged on
-a single binding mode in five of ten decoys ($-1221.1 plus.minus 6.0$ REU), while
-the remaining five were rejected as steric clashes. A cathepsin B-cleavable
+$-371.9 plus.minus 7.9$ REU for the TfR arm ($n = 5$). The construct's total score
+lies within 15 REU of the sum of the isolated arms, consistent with the two domains
+folding without gross destabilization. A preliminary Rosetta docking search of the
+EphA2 arm against its receptor placed five of ten decoys in a narrow favorable band
+($-1221.1 plus.minus 6.0$ REU), while the other five were rejected as steric
+clashes. A cathepsin B-cleavable
 Val-Cit-PABC linker is specified for payload conjugation.
 
 = Introduction
@@ -193,9 +194,9 @@ and their single-domain architecture permits two paratopes to be fused in tandem
 determines how freely the domains adopt their binding orientations; glycine--serine
 repeats are the usual choice because they are hydrophilic and unlikely to adopt
 secondary structure @chen2013. We therefore designed a nanobody whose EphA2
-arm engages the tumor and whose TfR arm enables BBB transcytosis
+arm engages the tumor and whose TfR arm is intended to enable BBB transcytosis
 (@fig:architecture), and asked whether both grafted paratopes remain foldable and
-docking-competent in that format.
+whether the tumor-targeting arm remains docking-competent in that format.
 
 = Methods and Materials
 
@@ -218,15 +219,16 @@ sequence alignment used as the ColabFold input.
 EphA2-Nb, TfR-Nb and the tandem bispecific were modeled with AlphaFold2 through the
 ColabFold pipeline using five seeds per construct @jumper2021 @mirdita2022, then
 subjected to AMBER relaxation, which removes steric clashes and regularizes bond
-geometry while preserving the predicted fold. Relaxed and unrelaxed scores were
-recorded for all five models per construct and ranked by relaxed score in Rosetta
-energy units (REU), where more negative values indicate more favorable structures.
+geometry while preserving the predicted fold. All five models per construct were
+scored with Rosetta (total_score) before and after relaxation and ranked by relaxed
+score in Rosetta energy units (REU), where more negative values indicate more
+favorable structures.
 
 == Molecular docking and interface analysis
 The EphA2 arm was docked against the EphA2 receptor using the Rosetta
 low-resolution docking protocol, a coarse rigid-body search with a centroid
-representation of side chains @gray2003; ten decoys were ranked by interface total
-score (REU), where scores above $10^5$ REU indicate steric clashes.
+representation of side chains @gray2003; ten decoys were ranked by Rosetta complex
+total score (REU), where scores above $10^5$ REU indicate steric clashes.
 Binding-interface residues were identified in PyMOL @delano2002 by differential
 solvent accessibility (dASA) at a $1.0$ #sym.angstrom#super[2] cutoff, i.e.
 positions buried upon complex formation, and compared with the CDR assignments to
@@ -242,17 +244,18 @@ mitotic arrest @doronina2003.
 = Results and Discussion
 
 == Fold quality and relaxation energetics
-AlphaFold2/ColabFold returned well-packed models for all three constructs, and
-relaxation improved every one of the fifteen models (@tab:scores). Mean relaxed
-energies were $-759.7 plus.minus 21.3$ REU for the tandem bispecific,
+AlphaFold2/ColabFold returned five models per construct, and relaxation improved
+every one of the fifteen models (@tab:scores). Mean relaxed energies were
+$-759.7 plus.minus 21.3$ REU for the tandem bispecific,
 $-402.5 plus.minus 10.1$ REU for the EphA2 arm and $-371.9 plus.minus 7.9$ REU for
-the TfR arm, and the best model was ranked fourth for each construct with only a
-narrow spread across ranks (54.6 REU for the tandem construct, 22.2 and 16.5 REU
-for the arms), so no construct relies on a single favorable outlier. The sum of the
-two monovalent arm energies is $-774.4$ REU, whereas the construct relaxes to
-$-759.7$ REU, a difference of only about 2% of the total. Fusion therefore does not
-appear to impose a folding penalty, and the two VHH domains behave as independently
-folding units joined by the linker.
+the TfR arm. The same model (the fourth-ranked prediction) had the lowest score for
+every construct, with only a narrow spread across the five models (54.6 REU for the
+tandem construct, 22.2 and 16.5 REU for the arms), so no construct relies on a
+single favorable outlier. The sum of the two arm scores is $-774.4$ REU, close to
+the construct's $-759.7$ REU. Because Rosetta total scores are not directly
+comparable across systems, since the linker and inter-domain contacts also
+contribute, this similarity is consistent with, rather than proof of, the two
+domains folding independently without a large penalty.
 
 #figure(
   placement: top,
@@ -274,17 +277,16 @@ folding units joined by the linker.
     deviation is taken over all five models.],
 ) <tab:scores>
 
-== Docking convergence of the EphA2 arm
+== Preliminary docking of the EphA2 arm
 Rosetta docking produced a sharply bimodal score distribution (@tab:docking): five
 of the ten decoys clustered between $-1215.3$ and $-1230.5$ REU
 ($-1221.1 plus.minus 6.0$ REU, spread 15.2 REU), while the remaining five scored
-above $+1.39 times 10^5$ REU. The nearly $1.4 times 10^5$ REU separation does not
-depend on the exact cutoff chosen, and the tight clustering of the favorable decoys
-indicates that the search converged on a single binding mode rather than sampling
-comparable alternatives. The dASA analysis recovered the expected
-complementarity-determining residues at the contact surface, i.e. the buried
-positions correspond to the transplanted paratope rather than to framework
-residues.
+above $+1.39 times 10^5$ REU. The two groups are separated by roughly
+$1.4 times 10^5$ REU, and the tight clustering of the favorable decoys is
+consistent with a single low-energy binding mode, although ten decoys are too few
+to establish convergence or to exclude alternative poses the search did not sample.
+In the favorable pose, the dASA analysis placed the buried surface at the
+transplanted CDRs rather than at framework residues, as intended.
 
 #figure(
   placement: top,
@@ -303,7 +305,7 @@ residues.
     [*0005*], [*-1230.5*], [0010], [-1223.1],
   ),
   caption: [Rosetta docking scores for the EphA2 arm against the EphA2 receptor
-    (interface total score). Favorable decoys cluster near $-1220$ REU; scores
+    (complex total score). Favorable decoys cluster near $-1220$ REU; scores
     above $10^5$ REU indicate steric clashes.],
 ) <tab:docking>
 
@@ -315,7 +317,7 @@ simultaneous engagement of EphA2 and TfR: 15 glycine--serine residues span rough
 @chen2013, so the two paratopes need not compete sterically for their epitopes. The
 relaxed model (@fig:model) shows the two domains arranged side by side rather than
 interdigitated, with the linker solvent-exposed and neither domain buried by the
-other --- the geometric prerequisite for the bispecific mechanism.
+other --- a geometric prerequisite for the proposed bispecific mechanism.
 
 #figure(
   placement: top,
@@ -363,7 +365,11 @@ models a static receptor without the conformational changes that accompany TfR
 transcytosis. Docking used a low-resolution protocol and ten decoys, so convergence
 within that sample does not exclude binding modes the search did not sample, and
 the epitope overlap between 6WX1 and the binder characterized in 6WRX is assumed
-rather than demonstrated. Dual engagement, avidity and developability properties
+rather than demonstrated. Only the EphA2 arm was docked: the interaction of the TfR
+arm with TfR was not modeled, so receptor-mediated transcytosis remains a design
+assumption rather than a computed result, and per-residue confidence metrics
+(pLDDT, PAE) were not retained, so the local reliability of the grafted CDR loops
+could not be assessed. Dual engagement, avidity and developability properties
 such as immunogenicity of a camelid VHH framework in humans were not modeled. The
 immediate experiments follow from those gaps: surface plasmon resonance or biolayer
 interferometry to measure the affinity of each arm and of the tandem construct, a
@@ -376,12 +382,20 @@ We designed a bispecific nanobody that couples an EphA2 tumor-targeting arm
 to a transferrin-receptor arm for blood--brain barrier transcytosis, grafted onto a
 camelid VHH scaffold and fused through a $(G_4 S)_3$ linker. Relaxation improved
 every one of the five predicted models per construct, and the construct
-relaxed to within 15 REU of the sum of its isolated arms, indicating that the two
-domains fold independently after fusion. Rosetta docking converged on a single
-EphA2 binding mode in half of the decoys, and a cathepsin B-cleavable Val-Cit-PABC
-linker provides a rational payload-release strategy. The design is fully specified
-by sequence and structure and is ready for recombinant expression and experimental
-testing.
+relaxed to a total score close to the sum of its isolated arms, consistent with the
+two domains folding independently after fusion. A preliminary Rosetta docking
+search placed five of ten decoys in a single favorable band for the EphA2 arm, and
+a cathepsin B-cleavable Val-Cit-PABC linker provides a rational payload-release
+strategy. The design is fully specified by sequence and structure and provides a
+defined starting point for recombinant expression and experimental testing.
+
+= Acknowledgements
+
+We thank Dr. Wang for supervision and guidance, and the
+Columbia Junior Science Journal editorial board for their review. The authors used
+pi.dev harness and Deepseek v4.1 flash for language editing and manuscript preparation; the tool did
+not contribute to the study design, data analysis, or scientific conclusions, and
+the authors have reviewed and take full responsibility for all content.
 
 = References
 
