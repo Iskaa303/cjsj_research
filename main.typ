@@ -52,7 +52,7 @@
 #let ink = rgb("#1f2a33")
 #let gridc = luma(210)
 
-// Schematic of the tandem construct and its delivery mechanism.
+// Schematic of the construct and its delivery mechanism.
 #let mechanism-figure() = {
   set text(size: 7pt)
   cetz.canvas({
@@ -107,7 +107,7 @@
       stroke: 0.7pt + orange)
     // paratope-epitope contacts
     for x in (1.80, 5.05) {
-      line((x, 6.53), (x, 5.53),
+      line((x, 6.53), (x, 5.88),
         stroke: (paint: dash, thickness: 0.7pt, dash: "dashed"))
     }
     // ---------------- C-terminal payload module
@@ -121,8 +121,8 @@
     content((1.70, 8.12), text(fill: teal, weight: "bold")[EphA2 arm (VHH)])
     content((5.30, 8.12), text(fill: orange, weight: "bold")[TfR arm (VHH)])
     content((3.50, 6.45), text(size: 6pt, fill: gray)[(G#sub[4]S)#sub[3] linker])
-    content((1.80, 5.05), text(fill: teal)[EphA2])
-    content((5.05, 5.05), text(fill: orange)[TfR])
+    content((1.80, 5.68), text(fill: teal)[EphA2])
+    content((5.05, 5.68), text(fill: orange)[TfR])
     content((1.70, 1.95), text(size: 6.5pt)[glioblastoma cell])
     content((5.30, 1.95), text(size: 6.5pt)[brain endothelium (BBB)])
     content((7.35, 5.34), text(size: 6pt, fill: ink)[Val-Cit-PABC])
@@ -139,7 +139,7 @@
 }
 
 // ---------------------------------------------------------------------------
-#title[Computational Design and Docking of a Bispecific Nanobody Targeting EphA2
+#title[Computational Design of a Bispecific Nanobody Targeting EphA2
 and the Transferrin Receptor for Brain-Tumor Delivery]
 
 #authors[Iskander Madikhan, Ameya Vathanan, Caroline Corey, and Rohnish P.]
@@ -148,15 +148,15 @@ and the Transferrin Receptor for Brain-Tumor Delivery]
 Receptor-mediated transcytosis (RMT) of the transferrin receptor (TfR) is one of
 the few clinically validated routes for delivering protein therapeutics across the
 blood--brain barrier (BBB), but brain-tumor therapy additionally requires
-tumor-selective engagement. We designed and evaluated in silico a tandem
-bispecific single-domain antibody (nanobody) that pairs an anti-EphA2 paratope
+tumor-selective engagement. We designed and evaluated a bispecific single-domain antibody (nanobody)
+that pairs an anti-EphA2 paratope
 with a TfR-binding paratope. Complementarity-determining regions (CDRs) from the
 anti-EphA2 antibody 3SKJ and the TfR binder 6WX1 were grafted onto the camelid VHH
 scaffold cAbBCII-10 (PDB 3DWT) and fused through a $(G_4 S)_3$ linker.
 AlphaFold2/ColabFold predicted five models per construct and AMBER relaxation
 improved every model, giving mean relaxed energies of $-759.7 plus.minus 21.3$ REU
-for the tandem construct, $-402.5 plus.minus 10.1$ REU for the EphA2 arm and
-$-371.9 plus.minus 7.9$ REU for the TfR arm ($n = 5$). The tandem energy lies
+for the construct, $-402.5 plus.minus 10.1$ REU for the EphA2 arm and
+$-371.9 plus.minus 7.9$ REU for the TfR arm ($n = 5$). The energy lies
 within 15 REU of the sum of the isolated arms, indicating that fusion introduces no
 significant strain. Rosetta docking of the EphA2 arm onto its receptor converged on
 a single binding mode in five of ten decoys ($-1221.1 plus.minus 6.0$ REU), while
@@ -192,7 +192,7 @@ and their single-domain architecture permits two paratopes to be fused in tandem
 @muyldermans2013. The fusion is mediated by a flexible peptide linker whose length
 determines how freely the domains adopt their binding orientations; glycine--serine
 repeats are the usual choice because they are hydrophilic and unlikely to adopt
-secondary structure @chen2013. We therefore designed a tandem nanobody whose EphA2
+secondary structure @chen2013. We therefore designed a nanobody whose EphA2
 arm engages the tumor and whose TfR arm enables BBB transcytosis
 (@fig:architecture), and asked whether both grafted paratopes remain foldable and
 docking-competent in that format.
@@ -249,7 +249,7 @@ $-402.5 plus.minus 10.1$ REU for the EphA2 arm and $-371.9 plus.minus 7.9$ REU f
 the TfR arm, and the best model was ranked fourth for each construct with only a
 narrow spread across ranks (54.6 REU for the tandem construct, 22.2 and 16.5 REU
 for the arms), so no construct relies on a single favorable outlier. The sum of the
-two monovalent arm energies is $-774.4$ REU, whereas the tandem construct relaxes to
+two monovalent arm energies is $-774.4$ REU, whereas the construct relaxes to
 $-759.7$ REU, a difference of only about 2% of the total. Fusion therefore does not
 appear to impose a folding penalty, and the two VHH domains behave as independently
 folding units joined by the linker.
@@ -372,22 +372,16 @@ EphA2-positive and EphA2-negative cell lines.
 
 = Conclusion
 
-We designed a tandem bispecific nanobody that couples an EphA2 tumor-targeting arm
+We designed a bispecific nanobody that couples an EphA2 tumor-targeting arm
 to a transferrin-receptor arm for blood--brain barrier transcytosis, grafted onto a
 camelid VHH scaffold and fused through a $(G_4 S)_3$ linker. Relaxation improved
-every one of the five predicted models per construct, and the tandem construct
+every one of the five predicted models per construct, and the construct
 relaxed to within 15 REU of the sum of its isolated arms, indicating that the two
 domains fold independently after fusion. Rosetta docking converged on a single
 EphA2 binding mode in half of the decoys, and a cathepsin B-cleavable Val-Cit-PABC
 linker provides a rational payload-release strategy. The design is fully specified
 by sequence and structure and is ready for recombinant expression and experimental
 testing.
-
-= Acknowledgements
-
-We thank our research mentor and the Columbia Junior Science Journal reviewers for
-guidance and feedback on this manuscript. [Mentor name and affiliation should be
-inserted here at submission.]
 
 = References
 
